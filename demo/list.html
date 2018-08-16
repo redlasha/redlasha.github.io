@@ -61,7 +61,7 @@ axios.get(publications).then(function(response) {
 	pubs.forEach(function(el, index, array) {
   	  var item = {};
         if(el.links && el.links.length > 0) {
-        	item['href'] = app.baseUrl + 'view.html?manifest=true&href=' + el.links[0].href; 
+        	item['href'] = 'view.html?manifest=true&href=' + el.links[0].href; 
         }
         if (el.images && el.images.length > 0) {
       	  item['img_src'] = el.images[0].href;
