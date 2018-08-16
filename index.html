@@ -1,9 +1,85 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Home</title>
-	<meta http-equiv="refresh" content="0; url=/demo/list.html" />
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,600i" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif,'Lobster';
+			color: #404040;
+		}
+		.wrap {
+			text-align : center;
+		}
+		.logo {
+			display: block;
+			margin-top: 2%;
+		}
+		h2 {
+			font-family: 'Lobster';
+			font-weight: 400;
+			font-size: 2em;
+		}
+		p {
+			width: 800px;
+			font-weight: 400;
+		}
+		.mainimg {
+			margin-top: 2%;
+			margin-bottom: 3%;
+			width: 400px;
+		}
+		.btn {
+			display: block;
+			width: 300px;
+			height: 50px;
+			background-color: #464341;
+			border: 0px;
+			color: #fff;
+			font-size: 1.2em;
+			margin-top: 2em;
+		}
+		.btn:hover {
+			background-color: #25a7e0;
+			cursor: pointer;
+		}
+		a {
+			font-style: italic;
+			font-weight: 600;
+			color: #25a7e0;
+		}
+		@media screen and (max-width:600px) {
+			.mainimg {
+				width: 80%;
+				margin-top: 5%
+			}
+			.logo {
+				width: 35%;
+				margin-bottom: 5%;
+			}
+			p {
+				width: 80%
+			}
+			.btn{
+				width: 80%
+			}
+		}
+	</style>
+	<title>Hello hslee.gq</title>
+	<link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
+	<div class="wrap">
+	<center>
+		<img class="mainimg" src="img01.png" alt="">
+		<h2>Sorry, getting ready to open.</h2>
+		<p>The website is currently under construction.
+
+		<button class="btn" onclick="alert('Thank You')">
+			Thank You
+		</button>
+	</center>
+	</div>
 </body>
 </html>
