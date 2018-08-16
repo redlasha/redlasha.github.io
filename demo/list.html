@@ -49,18 +49,19 @@ var app = new Vue({
 	el: '#app',
 	data: function () {
 		return {
-			items: []
+			items: [],
+			baseUrl: "http://106.245.234.218:19771/demo/"
 		}
 	}
 	
 })
-var publications = 'api/publications';
+var publications = app.baseUrl + 'api/publications';
 axios.get(publications).then(function(response) {
 	var pubs = response.data.publications;
 	pubs.forEach(function(el, index, array) {
   	  var item = {};
         if(el.links && el.links.length > 0) {
-        	item['href'] = 'view.html?manifest=true&href=' + el.links[0].href; 
+        	item['href'] = app.baseUrl + 'view.html?manifest=true&href=' + el.links[0].href; 
         }
         if (el.images && el.images.length > 0) {
       	  item['img_src'] = el.images[0].href;
