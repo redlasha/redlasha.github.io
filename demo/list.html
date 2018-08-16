@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Publication List</title>
+  <meta charset="utf-8">
+  
+  <style> 
+	.img-item {
+        width:100%;
+        float: left;
+        border: 2px solid hsla(0, 0%, 0%, 0.2);
+        margin: 10px;
+        
+    }
+    .img-item > a > img {
+        width:100%;
+    }
+    .img-item > a {
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+	<div class="title">
+        <h1> DEMO - Publication List </h1>
+    </div>
+    <div class="container" id="app">
+	    <masonry 
+		    :cols="{default: 5, 1250:4, 1000: 3, 700: 2, 400: 1}"
+	  		:gutter="{default: '30px', 700: '15px'}" >
+	    	<div class="img-item" v-for="item in items">
+	    		<a v-bind:href="item.href">
+	    			<img v-bind:src="item.img_src">
+	    			<p>{{item.title}}</p>
+	    		</a>
+	    	</div>
+    	</masonry>
+    </div>
+    
+    <script src="vue.js"></script>
+	<script src="vue-masonry.min.js"></script>
+	<script src="axios.min.js"></script>
+	<!-- TODO: request with axios -->
+	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    
+<script>
+
+var app = new Vue({
+	el: '#app',
+	data: function () {
+		return {
+			items: []
+		}
+	}
+	
+})
+var publications = 'api/publications';
+axios.get(publications).then(function(response) {
+	var pubs = response.data.publications;
+	pubs.forEach(function(el, index, array) {
+  	  var item = {};
+        if(el.links && el.links.length > 0) {
+        	item['href'] = 'view.html?manifest=true&href=' + el.links[0].href; 
+        }
+        if (el.images && el.images.length > 0) {
+      	  item['img_src'] = el.images[0].href;
+        } else {
+            var tt = "https://place-hold.it/150x190?text=No Cover Image&fontsize=13";
+            item['img_src'] = tt;
+        }
+  	  item['title'] = el.metadata.title;
+  	      	  
+  	  app.$data.items.push(item);
+
+    }); //forEach End
+	
+})
+.catch(function (error) {
+	// handle error
+	console.log(error);
+})
+.then(function () {
+	// always executed
+});
+
+
+</script>
+
+</body>
+</html>
