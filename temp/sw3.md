@@ -1,0 +1,11 @@
+# 소프트웨어 개발 3대 원칙
+1. KISS 
+ > Keep It Simple Stupid!
+ 
+2. YAGNI
+ > You Ain't Gonna Need It
+ 
+3. DRY
+ > Do not Repeat Yourself
+ 
+ 
