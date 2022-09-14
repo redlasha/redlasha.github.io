@@ -1,3 +1,9 @@
+---
+title: "우분투 리눅스 업그레이드 하기"
+date: 2022-09-14
+categories: software, linux, ubuntu
+---
+
 # 우분투 리눅스 업그레이드 하기
 
 리눅스를 사용하다 보면 업그레이드 하라고 한다. 귀찮지만 업그레이드를 해본다.
@@ -59,6 +65,6 @@ sudo reboot
 ```
 
 
-참고: https://jjudrgn.tistory.com/6
-참고: https://gentlesark.tistory.com/80
-참고: https://jhnyang.tistory.com/50
+참고: [https://jjudrgn.tistory.com/6](https://jjudrgn.tistory.com/6)  
+참고: [https://gentlesark.tistory.com/80](https://gentlesark.tistory.com/80)    
+참고: [https://jhnyang.tistory.com/50](https://jhnyang.tistory.com/50)  
