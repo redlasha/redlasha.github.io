@@ -31,5 +31,5 @@ iptables: unrecognized service
 iptables 대신 기본으로 ufw가 설정되어 있음.
 기억이 나지 않는다면 참고 블로그를 읽어보자
 
-참고: [https://dokeeo.tistory.com/40](https://dokeeo.tistory.com/40)
-참고: [https://lindarex.github.io/ubuntu/ubuntu-ufw-setting/](https://lindarex.github.io/ubuntu/ubuntu-ufw-setting/)
+참고: [https://dokeeo.tistory.com/40](https://dokeeo.tistory.com/40)   
+참고: [https://lindarex.github.io/ubuntu/ubuntu-ufw-setting/](https://lindarex.github.io/ubuntu/ubuntu-ufw-setting/)   
