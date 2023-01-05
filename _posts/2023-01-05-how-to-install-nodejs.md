@@ -2,10 +2,6 @@
 title: node 설치하기 with nvm
 date: 2023-01-05
 categories: software
-keywords:
-  - node
-  - nvm
-  - npm
 ---
 # node 설치하기
 
