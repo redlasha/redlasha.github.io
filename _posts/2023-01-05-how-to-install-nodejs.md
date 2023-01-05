@@ -54,6 +54,11 @@ nvm use 18.12.1
  
 여기까지 하면 node & npm 을 사용할 수 있게 된다.
  
- 
+## npm 업데이트
+
+npm 업데이트  
+```
+npm install npm@latest -g
+```
  
  
