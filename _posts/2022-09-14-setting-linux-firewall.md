@@ -2,6 +2,7 @@
 title: "우분투 리눅스 방화벽 설정"
 date: 2022-09-14
 categories: software
+published: false
 ---
 
 ## 리눅스 방화벽 설정하기

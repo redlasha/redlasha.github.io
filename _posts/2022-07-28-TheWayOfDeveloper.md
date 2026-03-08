@@ -2,6 +2,7 @@
 title: "개발자의 길"
 date: 2022-07-28
 categories: software
+published: false
 ---
 
 ## 개발자가 일을 잘하려면?
