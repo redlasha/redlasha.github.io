@@ -1,3 +1,9 @@
+---
+title: "The Universal Loop: 관찰, 이해, 행동 — 그리고 첫 번째 단계의 실패"
+date: 2026-03-09
+categories: software
+---
+
 # The Universal Loop: 관찰, 이해, 행동 — 그리고 첫 번째 단계의 실패
 
 > 모든 문제 해결은 같은 3단계 루프를 따른다. 그리고 거의 언제나, 첫 번째 단계에서 실패한다.
