@@ -14,6 +14,8 @@
 remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" #"default" , "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+timezone: Asia/Seoul
+
 # Site Settings
 locale                   : "ko_KR" #"en-US"
 title                    : "redlasha's blog"
