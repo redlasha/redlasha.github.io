@@ -2,6 +2,7 @@
 title: "우분투 리눅스 업그레이드 하기"
 date: 2022-09-14
 categories: software
+published: false
 ---
 
 ## 리눅스 업그레이드 알림
