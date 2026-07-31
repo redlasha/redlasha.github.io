@@ -144,9 +144,8 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
-  - CLAUDE.md # 저장소 운영 규약 (사이트에 게시하지 않음)
-  - IDEAS.md # 글감 인박스 (사이트에 게시하지 않음)
-  - _ops # 운영 문서: 전략/지표/디자인/조사 (사이트에 게시하지 않음)
+  - CLAUDE.md # 저장소 규약 (사이트에 게시하지 않음)
+  # 기획·조사·초안·지표는 비공개 워크스페이스(redlasha/blog-ops)에 있다
 keep_files:
   - .git
   - .svn
