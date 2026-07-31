@@ -31,8 +31,11 @@
 | `_ops/ANALYTICS.md` | 측정 기준, 관찰 로그, 도출한 액션 | `/blog-analytics` |
 | `_ops/DESIGN.md` | 디자인 시스템, 조판·이미지 규격 | `/blog-design` |
 | `_ops/DECISIONS.md` | 결정과 그 이유 (되돌릴 때 필요) | 전 스킬 |
+| `_ops/EXPERIMENTS.md` | 실측 프로토콜과 결과 | `/blog-research` |
 | `_ops/research/*.md` | 조사 산출물 (날짜별, 불변) | `/blog-research` |
 | `IDEAS.md` | 글감 인박스 | 아무 때나 |
+
+**실측을 따로 둔 이유**: 이 블로그의 차별점은 관찰 기반이라는 것이다. 문서 인용과 직접 돌려본 결과는 근거의 급이 다르므로, 실측은 가설·반증 조건·통제 변수·결과를 한 곳에 모아 재현 가능하게 남긴다.
 
 **원칙 세 가지**
 

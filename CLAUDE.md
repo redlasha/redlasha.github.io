@@ -96,6 +96,7 @@ curl -s https://redlasha.github.io/software/<slug>/ | grep -o 'href="/software/[
 | [`_ops/ANALYTICS.md`](_ops/ANALYTICS.md) | 측정 기준, 관찰 로그 |
 | [`_ops/DESIGN.md`](_ops/DESIGN.md) | 디자인 시스템, 조판 값과 근거 |
 | [`_ops/DECISIONS.md`](_ops/DECISIONS.md) | 결정과 그 이유 |
+| [`_ops/EXPERIMENTS.md`](_ops/EXPERIMENTS.md) | 실측 프로토콜과 결과 |
 | `_ops/research/` | 조사 산출물 (날짜별, append-only) |
 | `IDEAS.md` | 글감 인박스 |
 
@@ -114,3 +115,18 @@ curl -s https://redlasha.github.io/software/<slug>/ | grep -o 'href="/software/[
 | 행동 | `/blog-design` | 디자인 시스템 관리, 렌더링 측정 |
 
 **작업을 시작하기 전에 해당 단계의 상태 파일을 먼저 읽는다.** 없는 상태에서 새로 만들지 말고 기존 판단을 이어받는다.
+
+> ⚠️ **스킬은 이 저장소 디렉터리에서 세션을 열어야 잡힌다.** `.claude/skills/`는 프로젝트 스코프라 다른 디렉터리에서 시작한 세션에서는 `/blog-*`가 목록에 뜨지 않는다. 그 경우 스킬 파일(`.claude/skills/<name>/SKILL.md`)을 직접 읽어 따르면 동작은 같다.
+
+## 사이트 정보 구조
+
+| 경로 | 무엇 | 진입점 |
+|---|---|---|
+| `/` | 최근 글 목록 | 사이트 제목 |
+| `/tags/` | 태그 아카이브 — 시리즈 탐색의 실질 축 | 마스트헤드 |
+| `/about/` | 블로그 소개, 시리즈 안내, 만든 것 | 마스트헤드 |
+| `/categories/` | 카테고리 아카이브 | 현재 미연결 |
+
+마스트헤드 메뉴는 [`_data/navigation.yml`](_data/navigation.yml)에서 관리한다. **항목을 늘리지 않는다** — 글이 몇 편 없는 블로그에 메뉴가 많으면 비어 보인다. `/categories/`를 넣지 않은 건 카테고리가 `software` 하나뿐이라 클릭해도 홈과 같은 목록이 나오기 때문이다. 2개 이상 되면 추가한다.
+
+**새 페이지를 만들면 진입점을 함께 만든다.** 아카이브 페이지를 만들어놓고 어디서도 링크하지 않아 죽은 페이지가 된 적이 있다.
