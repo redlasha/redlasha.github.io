@@ -13,4 +13,53 @@
 </script>
 {% endif %}
 
+<!-- 조판 보정: 한국어 줄바꿈, 본문 폭, 제목 위계, 표 밀도 -->
+<style>
+  /* 한국어는 어절 단위로 줄바꿈한다 (단어 중간 절단 방지) */
+  .page__content,
+  .page__title,
+  .archive__item-title,
+  .archive__item-excerpt,
+  .toc__menu {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* 본문 폭 확대 — 우측 레일은 목차가 쓰고, 전체 래퍼를 넓혀 본문에 여유를 준다 */
+  @media screen and (min-width: 1280px) {
+    #main { max-width: 1500px; }
+  }
+
+  /* 제목 위계 — 기본값은 본문 대비 1.25배라 섹션 구분이 보이지 않는다 */
+  .page__content h2 {
+    font-size: 1.6em;
+    margin-top: 2.4em;
+  }
+  .page__content h3 {
+    font-size: 1.28em;
+    margin-top: 1.9em;
+  }
+  .page__content h4 {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+  }
+
+  /* 표 — 좁은 셀에서 한국어가 잘리지 않도록 */
+  .page__content table {
+    font-size: 0.88em;
+  }
+  .page__content th,
+  .page__content td {
+    word-break: keep-all;
+    padding: 0.5em 0.7em;
+  }
+
+  /* 인라인 코드가 하이픈에서 갈라지지 않게 */
+  .page__content p > code,
+  .page__content li > code,
+  .page__content td > code {
+    white-space: nowrap;
+  }
+</style>
+
 <!-- end custom head snippets -->

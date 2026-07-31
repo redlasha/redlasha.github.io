@@ -1,10 +1,10 @@
 ---
 title: "Claude Code 토큰, 어디서 새고 있나 — 캐시와 컨텍스트로 보는 절약법"
+excerpt: "Claude Code는 매 턴마다 대화 전체를 다시 보낸다. 캐시가 깨지는 지점만 알아도 같은 작업의 가격이 10배 달라진다. 캐시 무효화 지점과 컨텍스트 관리법 정리."
 date: 2026-08-01
 categories: software
+tags: [claude-code, ai-coding, 개발환경, 비용최적화]
 ---
-
-# Claude Code 토큰, 어디서 새고 있나 — 캐시와 컨텍스트로 보는 절약법
 
 > 덜어낼수록 잘 돌아간다. 문제는 무엇을 덜어낼지 아는 것이다.
 
