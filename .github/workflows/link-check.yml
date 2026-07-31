@@ -1,0 +1,47 @@
+name: 링크 검사
+
+# 글에 외부 문서 링크가 많아 링크 부패가 실제 문제가 된다.
+# 매주 한 번 훑고, 글을 새로 올릴 때도 확인한다.
+on:
+  schedule:
+    - cron: "0 0 * * 1" # 매주 월요일 09:00 KST
+  push:
+    branches: [master]
+    paths:
+      - "_posts/**"
+      - "_pages/**"
+      - "index.md"
+      - "404.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 링크 확인
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429는 봇 차단이지 죽은 링크가 아니다 — 실패로 치지 않는다
+          args: >-
+            --no-progress
+            --max-retries 2
+            --accept 200,206,403,429
+            --exclude-mail
+            --exclude-path ./_site
+            './**/*.md'
+          fail: false
+          output: ./lychee/out.md
+
+      - name: 깨진 링크가 있으면 이슈로 남긴다
+        if: env.lychee_exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "깨진 링크 발견"
+          content-filepath: ./lychee/out.md
