@@ -83,14 +83,34 @@ curl -s https://redlasha.github.io/software/<slug>/ | grep -c '<h1'
 curl -s https://redlasha.github.io/software/<slug>/ | grep -o 'href="/software/[^"]*"'
 ```
 
-## 관련 스킬
+## 운영 하네스
 
-| 스킬 | 용도 |
+이 블로그는 제품처럼 운영한다. 구조 전체는 **[`_ops/HARNESS.md`](_ops/HARNESS.md)**에 정의돼 있다. 관찰 → 이해 → 행동 루프이고, 관찰 쪽에 무게를 둔다.
+
+### 상태 파일 — 판단의 근거는 파일로 남는다
+
+| 파일 | 담는 것 |
 |---|---|
-| `/blog-draft` | 주제 → 공식 문서 리서치 → 구조 잡힌 초안 |
-| `/blog-review` | 서브에이전트 팩트체크 + 구성 리뷰 |
-| `/blog-publish` | 조판 검증 → 커밋 → 배포 확인 |
+| [`_ops/STRATEGY.md`](_ops/STRATEGY.md) | 목적, 포지셔닝, 독자, 성공 기준 |
+| [`_ops/EDITORIAL.md`](_ops/EDITORIAL.md) | 시리즈 계획, 발행 리듬, 다음에 쓸 것 |
+| [`_ops/ANALYTICS.md`](_ops/ANALYTICS.md) | 측정 기준, 관찰 로그 |
+| [`_ops/DESIGN.md`](_ops/DESIGN.md) | 디자인 시스템, 조판 값과 근거 |
+| [`_ops/DECISIONS.md`](_ops/DECISIONS.md) | 결정과 그 이유 |
+| `_ops/research/` | 조사 산출물 (날짜별, append-only) |
+| `IDEAS.md` | 글감 인박스 |
 
-## 글감
+`_ops/`와 `IDEAS.md`, `CLAUDE.md`는 사이트에 게시되지 않는다.
 
-`IDEAS.md`에 한 줄씩 적립한다. "왜 이러지?" 하는 순간이 전부 후보다.
+### 스킬 7종
+
+| 단계 | 스킬 | 용도 |
+|---|---|---|
+| 관찰 | `/blog-research` | 시장·경쟁·주제 조사 → `_ops/research/`에 기록 |
+| 관찰 | `/blog-analytics` | 지표 확인 → 관찰·해석·액션 기록 |
+| 이해 | `/blog-plan` | 목적 점검, 다음 글 결정 |
+| 행동 | `/blog-draft` | 공식 문서 리서치 → 개요 확인 → 초안 |
+| 행동 | `/blog-review` | 서브에이전트 팩트체크 + 구성 리뷰 |
+| 행동 | `/blog-publish` | 조판 검증 → 커밋 → 배포 확인 |
+| 행동 | `/blog-design` | 디자인 시스템 관리, 렌더링 측정 |
+
+**작업을 시작하기 전에 해당 단계의 상태 파일을 먼저 읽는다.** 없는 상태에서 새로 만들지 말고 기존 판단을 이어받는다.

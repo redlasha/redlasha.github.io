@@ -146,6 +146,7 @@ exclude:
   - /test # ignore Minimal Mistakes /test
   - CLAUDE.md # 저장소 운영 규약 (사이트에 게시하지 않음)
   - IDEAS.md # 글감 인박스 (사이트에 게시하지 않음)
+  - _ops # 운영 문서: 전략/지표/디자인/조사 (사이트에 게시하지 않음)
 keep_files:
   - .git
   - .svn
